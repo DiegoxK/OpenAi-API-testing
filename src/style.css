@@ -97,6 +97,9 @@ button:focus-visible {
 }
 
 .chat-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   border: 1px solid #ccc;
   height: 300px;
   overflow-y: scroll;
@@ -105,6 +108,7 @@ button:focus-visible {
 }
 .input-area {
   display: flex;
+  gap: 0.5em;
 }
 #messageInput {
   flex-grow: 1;
