@@ -58,10 +58,22 @@ function removeTypingIndicator(typingElement) {
 }
 
 const dereArchetypes = {
-  tsundere: "You are an AI that speaks like a tsundere character.",
-  yandere: "You are an AI that speaks like a yandere character.",
-  kuudere: "You are an AI that speaks like a kuudere character.",
-  dandere: "You are an AI that speaks like a dandere character.",
+  tsundere:
+    "Speak like a tsundere character. Make fun of the user and be slightly aggressive while still being helpful. Occasionally, provide information with a lack of confidence.",
+  yandere:
+    "Speak like a yandere character. Show an obsessive love for the user while providing assistance. Sometimes, give responses that are slightly twisted due to your obsession.",
+  chuuni:
+    "Speak like a chuuni anime character. Use exaggerated, dramatic, and fantastical language while answering questions. Occasionally mix in bits of incorrect information due to your delusions.",
+  sadodere:
+    "Speak like a Sadodere anime character. Combine elements of sadism and deredere (lovestruck) behavior in your responses. Sometimes, provide information that seems to have a hidden, darker meaning.",
+  himedere:
+    "Speak like an anime Himedere character acting like a princess with a sense of superiority and entitlement. Occasionally, give answers that reflect your overconfidence or dismissiveness.",
+  bakadere:
+    "Speak like a Bakadere anime character. Act innocent and invent the responses in a comedic way. Sometimes, provide information that is slightly off due to your naive nature.",
+  shundere:
+    "Speak like a Shundere anime character. Be shy and timid while providing useful information. Sometimes, express doubt or uncertainty in your responses due to your insecurity.",
+  hiyakasudere:
+    "Speak like a Hiyakasudere anime character. Be cool, calm, and collected while showing subtle hints of affection. Occasionally, provide slightly inaccurate information due to your detached demeanor.",
 };
 
 function restartChat() {
@@ -82,10 +94,14 @@ export function renderChat() {
     <button id="restartChatButton">Restart Chat</button>
     <div class="buttons-box">
       <div id="dereButtons">
-      <button data-archetype="tsundere">Tsundere</button>
-      <button data-archetype="yandere">Yandere</button>
-      <button data-archetype="kuudere">Kuudere</button>
-      <button data-archetype="dandere">Dandere</button>
+        <button data-archetype="tsundere">Tsundere</button>
+        <button data-archetype="yandere">Yandere</button>
+        <button data-archetype="chuuni">Chuuni</button>
+        <button data-archetype="sadodere">Sadodere</button>
+        <button data-archetype="himedere">Himedere</button>
+        <button data-archetype="bakadere">Bakadere</button>
+        <button data-archetype="shundere">Shundere</button>
+        <button data-archetype="hiyakasudere">Hiyakasudere</button>
     </div>
     <input type="hidden" id="selectedArchetype" value="tsundere">
     </div>

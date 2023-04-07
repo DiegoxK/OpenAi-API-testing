@@ -139,6 +139,13 @@ button:focus-visible {
   padding: 5px;
 }
 
+#dereButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+}
+
 #dereButtons button.selected {
   background-color: #a12b3a;
   color: white;
@@ -156,7 +163,7 @@ button:focus-visible {
   background-color: #a4263b;
   color: white;
   margin-left: auto;
-  max-width: 60%;
+  max-width: 85%;
   border-bottom-right-radius: 0;
 }
 
@@ -164,7 +171,7 @@ button:focus-visible {
   background-color: #3b3b3b;
   color: white;
   margin-right: auto;
-  max-width: 60%;
+  max-width: 85%;
   border-bottom-left-radius: 0;
 }
 
@@ -185,7 +192,7 @@ button:focus-visible {
 #messageInput {
   flex-grow: 1;
   padding: 8px;
-  border: 1px solid #ced4da;
+  border: 1px solid #581f1f;
   border-radius: 4px;
   font-size: 14px;
   outline: none;
@@ -199,11 +206,13 @@ button:focus-visible {
 
 #sendButton {
   margin-left: 5px;
-  background-color: #a4263b;
   color: white;
   border-color: #8b1b2e;
-  font-size: 14px;
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#sendButton:hover {
+  background-color: #8b1b2e;
 }
