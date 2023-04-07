@@ -2,11 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,26 +12,24 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/* Links */
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ff6464;
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+  color: #f25353;
 }
 
+/* General layout */
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 #app {
@@ -43,27 +39,39 @@ h1 {
   text-align: center;
 }
 
+/* Headings */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Logos */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #ff6464aa);
 }
+
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #f7df1eaa);
 }
 
+/* Cards */
 .card {
   padding: 2em;
 }
 
+/* Miscellaneous */
 .read-the-docs {
   color: #888;
 }
 
+/* Buttons */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -75,27 +83,31 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: #ff6464;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Light mode */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #47212a;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #ff7474;
   }
   button {
     background-color: #f9f9f9;
   }
 }
 
+/* Chat area */
 .chat-area {
   display: flex;
   flex-direction: column;
@@ -106,18 +118,92 @@ button:focus-visible {
   padding: 10px;
   margin-bottom: 10px;
 }
+
 .input-area {
   display: flex;
   gap: 0.5em;
 }
+
+.input-area input {
+  margin-top: 1em;
+}
+
+.buttons-box {
+  display: flex;
+  margin-top: 1em;
+  gap: 0.5em;
+}
+
 #messageInput {
   flex-grow: 1;
   padding: 5px;
 }
-#sendButton {
-  background-color: #007bff;
-  border: none;
+
+#dereButtons button.selected {
+  background-color: #a12b3a;
   color: white;
-  padding: 5px 15px;
+  border-color: #c3243c;
+}
+
+/* Messages */
+.message {
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.user-message {
+  background-color: #a4263b;
+  color: white;
+  margin-left: auto;
+  max-width: 60%;
+  border-bottom-right-radius: 0;
+}
+
+.ai-message {
+  background-color: #3b3b3b;
+  color: white;
+  margin-right: auto;
+  max-width: 60%;
+  border-bottom-left-radius: 0;
+}
+
+.chat-messages {
+  overflow-y: scroll;
+  max-height: 400px;
+  padding: 10px;
+  background-color: #2b2b2b;
+  border-radius: 6px;
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#messageInput {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 1em;
+}
+
+#messageInput:focus {
+  border-color: #c13c52;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
+#sendButton {
+  margin-left: 5px;
+  background-color: #a4263b;
+  color: white;
+  border-color: #8b1b2e;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
   cursor: pointer;
 }
